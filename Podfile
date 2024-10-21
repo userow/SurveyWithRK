@@ -6,7 +6,7 @@ target 'SurveyWithRK' do
   use_frameworks!
 
   # Pods for SurveyWithRK
-  pod 'ResearchKit'
+  pod 'ResearchKit', '~>1.5.2'
   pod 'Mantle'
   pod 'Realm'
 end

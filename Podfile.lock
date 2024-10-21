@@ -1,0 +1,28 @@
+PODS:
+  - Mantle (2.2.0):
+    - Mantle/extobjc (= 2.2.0)
+  - Mantle/extobjc (2.2.0)
+  - Realm (10.39.1):
+    - Realm/Headers (= 10.39.1)
+  - Realm/Headers (10.39.1)
+  - ResearchKit (1.5.2)
+
+DEPENDENCIES:
+  - Mantle
+  - Realm
+  - ResearchKit
+
+SPEC REPOS:
+  trunk:
+    - Mantle
+    - Realm
+    - ResearchKit
+
+SPEC CHECKSUMS:
+  Mantle: c5aa8794a29a022dfbbfc9799af95f477a69b62d
+  Realm: 1f3157edf145f4d9036765ab550c8cb18f62b700
+  ResearchKit: a5770681dd61afddd3d1f24d232b9abf00cba454
+
+PODFILE CHECKSUM: 3a9401242cabf117c61b8981a986039ad7cf992a
+
+COCOAPODS: 1.15.2

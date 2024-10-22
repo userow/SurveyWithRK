@@ -13,6 +13,10 @@
 		91A5F9EE2CC6A82800BB29CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F9ED2CC6A82800BB29CE /* ViewController.swift */; };
 		91A5F9F32CC6A82A00BB29CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A5F9F22CC6A82A00BB29CE /* Assets.xcassets */; };
 		91A5F9F62CC6A82A00BB29CE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 91A5F9F52CC6A82A00BB29CE /* Base */; };
+		91A5FA002CC6B83B00BB29CE /* SurveyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F9FF2CC6B83B00BB29CE /* SurveyBuilder.swift */; };
+		91A5FA0F2CC7D0C400BB29CE /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA0E2CC7D0C400BB29CE /* DataService.m */; };
+		91A5FA152CC7D39500BB29CE /* InterestDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA112CC7D39500BB29CE /* InterestDTO.m */; };
+		91A5FA162CC7D39500BB29CE /* SubjectDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA132CC7D39500BB29CE /* SubjectDTO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,14 @@
 		91A5F9F22CC6A82A00BB29CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91A5F9F52CC6A82A00BB29CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91A5F9F72CC6A82A00BB29CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91A5F9FF2CC6B83B00BB29CE /* SurveyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyBuilder.swift; sourceTree = "<group>"; };
+		91A5FA0C2CC7D0C400BB29CE /* SurveyWithRK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SurveyWithRK-Bridging-Header.h"; sourceTree = "<group>"; };
+		91A5FA0D2CC7D0C400BB29CE /* DataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
+		91A5FA0E2CC7D0C400BB29CE /* DataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
+		91A5FA102CC7D39500BB29CE /* InterestDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestDTO.h; sourceTree = "<group>"; };
+		91A5FA112CC7D39500BB29CE /* InterestDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestDTO.m; sourceTree = "<group>"; };
+		91A5FA122CC7D39500BB29CE /* SubjectDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectDTO.h; sourceTree = "<group>"; };
+		91A5FA132CC7D39500BB29CE /* SubjectDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectDTO.m; sourceTree = "<group>"; };
 		B767893587B70D01D34CC24D /* Pods-SurveyWithRK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyWithRK.release.xcconfig"; path = "Target Support Files/Pods-SurveyWithRK/Pods-SurveyWithRK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +58,6 @@
 				0B93809ADB1C1188115B2342 /* Pods-SurveyWithRK.debug.xcconfig */,
 				B767893587B70D01D34CC24D /* Pods-SurveyWithRK.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -79,12 +90,15 @@
 		91A5F9E82CC6A82800BB29CE /* SurveyWithRK */ = {
 			isa = PBXGroup;
 			children = (
+				91A5FA082CC7D07F00BB29CE /* Data */,
+				91A5FA142CC7D39500BB29CE /* DTO */,
 				91A5F9FD2CC6B0E900BB29CE /* UI */,
 				91A5F9E92CC6A82800BB29CE /* AppDelegate.swift */,
 				91A5F9EB2CC6A82800BB29CE /* SceneDelegate.swift */,
 				91A5F9F22CC6A82A00BB29CE /* Assets.xcassets */,
 				91A5F9F42CC6A82A00BB29CE /* LaunchScreen.storyboard */,
 				91A5F9F72CC6A82A00BB29CE /* Info.plist */,
+				91A5FA0C2CC7D0C400BB29CE /* SurveyWithRK-Bridging-Header.h */,
 			);
 			path = SurveyWithRK;
 			sourceTree = "<group>";
@@ -93,8 +107,29 @@
 			isa = PBXGroup;
 			children = (
 				91A5F9ED2CC6A82800BB29CE /* ViewController.swift */,
+				91A5F9FF2CC6B83B00BB29CE /* SurveyBuilder.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		91A5FA082CC7D07F00BB29CE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				91A5FA0D2CC7D0C400BB29CE /* DataService.h */,
+				91A5FA0E2CC7D0C400BB29CE /* DataService.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		91A5FA142CC7D39500BB29CE /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				91A5FA102CC7D39500BB29CE /* InterestDTO.h */,
+				91A5FA112CC7D39500BB29CE /* InterestDTO.m */,
+				91A5FA122CC7D39500BB29CE /* SubjectDTO.h */,
+				91A5FA132CC7D39500BB29CE /* SubjectDTO.m */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +166,7 @@
 				TargetAttributes = {
 					91A5F9E52CC6A82800BB29CE = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -212,8 +248,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A5F9EE2CC6A82800BB29CE /* ViewController.swift in Sources */,
+				91A5FA162CC7D39500BB29CE /* SubjectDTO.m in Sources */,
+				91A5FA152CC7D39500BB29CE /* InterestDTO.m in Sources */,
+				91A5FA0F2CC7D0C400BB29CE /* DataService.m in Sources */,
 				91A5F9EA2CC6A82800BB29CE /* AppDelegate.swift in Sources */,
 				91A5F9EC2CC6A82800BB29CE /* SceneDelegate.swift in Sources */,
+				91A5FA002CC6B83B00BB29CE /* SurveyBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SN623CU8P7;
@@ -374,6 +415,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.bucktracker.SurveyWithRK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SurveyWithRK/SurveyWithRK-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -385,6 +428,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SN623CU8P7;
@@ -403,6 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = app.bucktracker.SurveyWithRK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SurveyWithRK/SurveyWithRK-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

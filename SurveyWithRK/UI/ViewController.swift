@@ -10,10 +10,22 @@ import ResearchKit
 
 class ViewController: UIViewController, ORKTaskViewControllerDelegate {
 
-    
+    // MARK: - Properties
+
+    let apiService: ApiServiceProtocol
 
     // MARK: - Lifecycle
-    
+
+    init(apiService: ApiServiceProtocol) {
+        self.apiService = apiService
+        super.init(nibName: nil, bundle: nil)  // standard ViewController initializer
+    }
+
+    // for compatibility with UIViewController
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

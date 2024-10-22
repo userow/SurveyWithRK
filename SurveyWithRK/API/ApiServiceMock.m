@@ -11,7 +11,7 @@
 @implementation ApiServiceMock
 
 - (void)sendEventWithSubject:(SubjectDTO *)subject {
-
+    // TODO: store to Realm; serialize; store JSON to Realm
 }
 
 @end

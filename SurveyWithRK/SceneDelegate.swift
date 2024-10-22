@@ -21,8 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Initialization of window and root controller.
         window = UIWindow(windowScene: windowScene)
 
+        // TODO: ??? move initialization to Coordinator - to manage dependencies and implement navigation logic
+        let apiService = ApiServiceMock()
+
         // Created VC
-        let viewController = ViewController()
+        let viewController = ViewController(apiService: ApiServiceMock())
 
         // Create Navigation VC with VC in it
         let navViewController = UINavigationController(rootViewController: viewController)
@@ -60,7 +63,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
 
 }
 

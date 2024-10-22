@@ -14,7 +14,7 @@
 		91A5F9F32CC6A82A00BB29CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A5F9F22CC6A82A00BB29CE /* Assets.xcassets */; };
 		91A5F9F62CC6A82A00BB29CE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 91A5F9F52CC6A82A00BB29CE /* Base */; };
 		91A5FA002CC6B83B00BB29CE /* SurveyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F9FF2CC6B83B00BB29CE /* SurveyBuilder.swift */; };
-		91A5FA0F2CC7D0C400BB29CE /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA0E2CC7D0C400BB29CE /* DataService.m */; };
+		91A5FA0F2CC7D0C400BB29CE /* ApiServiceMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA0E2CC7D0C400BB29CE /* ApiServiceMock.m */; };
 		91A5FA152CC7D39500BB29CE /* InterestDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA112CC7D39500BB29CE /* InterestDTO.m */; };
 		91A5FA162CC7D39500BB29CE /* SubjectDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA132CC7D39500BB29CE /* SubjectDTO.m */; };
 /* End PBXBuildFile section */
@@ -31,12 +31,13 @@
 		91A5F9F72CC6A82A00BB29CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A5F9FF2CC6B83B00BB29CE /* SurveyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyBuilder.swift; sourceTree = "<group>"; };
 		91A5FA0C2CC7D0C400BB29CE /* SurveyWithRK-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SurveyWithRK-Bridging-Header.h"; sourceTree = "<group>"; };
-		91A5FA0D2CC7D0C400BB29CE /* DataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
-		91A5FA0E2CC7D0C400BB29CE /* DataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
+		91A5FA0D2CC7D0C400BB29CE /* ApiServiceMock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiServiceMock.h; sourceTree = "<group>"; };
+		91A5FA0E2CC7D0C400BB29CE /* ApiServiceMock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiServiceMock.m; sourceTree = "<group>"; };
 		91A5FA102CC7D39500BB29CE /* InterestDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestDTO.h; sourceTree = "<group>"; };
 		91A5FA112CC7D39500BB29CE /* InterestDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestDTO.m; sourceTree = "<group>"; };
 		91A5FA122CC7D39500BB29CE /* SubjectDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectDTO.h; sourceTree = "<group>"; };
 		91A5FA132CC7D39500BB29CE /* SubjectDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectDTO.m; sourceTree = "<group>"; };
+		91A5FA192CC7DEF700BB29CE /* ApiServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApiServiceProtocol.h; path = ../../../../../Desktop/ApiServiceProtocol.h; sourceTree = "<group>"; };
 		B767893587B70D01D34CC24D /* Pods-SurveyWithRK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyWithRK.release.xcconfig"; path = "Target Support Files/Pods-SurveyWithRK/Pods-SurveyWithRK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,7 +91,8 @@
 		91A5F9E82CC6A82800BB29CE /* SurveyWithRK */ = {
 			isa = PBXGroup;
 			children = (
-				91A5FA082CC7D07F00BB29CE /* Data */,
+				91A5FA082CC7D07F00BB29CE /* API */,
+				91A5FA1A2CC7E06000BB29CE /* DATA */,
 				91A5FA142CC7D39500BB29CE /* DTO */,
 				91A5F9FD2CC6B0E900BB29CE /* UI */,
 				91A5F9E92CC6A82800BB29CE /* AppDelegate.swift */,
@@ -112,13 +114,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		91A5FA082CC7D07F00BB29CE /* Data */ = {
+		91A5FA082CC7D07F00BB29CE /* API */ = {
 			isa = PBXGroup;
 			children = (
-				91A5FA0D2CC7D0C400BB29CE /* DataService.h */,
-				91A5FA0E2CC7D0C400BB29CE /* DataService.m */,
+				91A5FA192CC7DEF700BB29CE /* ApiServiceProtocol.h */,
+				91A5FA0D2CC7D0C400BB29CE /* ApiServiceMock.h */,
+				91A5FA0E2CC7D0C400BB29CE /* ApiServiceMock.m */,
 			);
-			path = Data;
+			path = API;
 			sourceTree = "<group>";
 		};
 		91A5FA142CC7D39500BB29CE /* DTO */ = {
@@ -130,6 +133,13 @@
 				91A5FA132CC7D39500BB29CE /* SubjectDTO.m */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		91A5FA1A2CC7E06000BB29CE /* DATA */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DATA;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +260,7 @@
 				91A5F9EE2CC6A82800BB29CE /* ViewController.swift in Sources */,
 				91A5FA162CC7D39500BB29CE /* SubjectDTO.m in Sources */,
 				91A5FA152CC7D39500BB29CE /* InterestDTO.m in Sources */,
-				91A5FA0F2CC7D0C400BB29CE /* DataService.m in Sources */,
+				91A5FA0F2CC7D0C400BB29CE /* ApiServiceMock.m in Sources */,
 				91A5F9EA2CC6A82800BB29CE /* AppDelegate.swift in Sources */,
 				91A5F9EC2CC6A82800BB29CE /* SceneDelegate.swift in Sources */,
 				91A5FA002CC6B83B00BB29CE /* SurveyBuilder.swift in Sources */,

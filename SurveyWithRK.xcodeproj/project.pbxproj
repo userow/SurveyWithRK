@@ -42,7 +42,6 @@
 		91A5FA112CC7D39500BB29CE /* InterestDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestDTO.m; sourceTree = "<group>"; };
 		91A5FA122CC7D39500BB29CE /* SubjectDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectDTO.h; sourceTree = "<group>"; };
 		91A5FA132CC7D39500BB29CE /* SubjectDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectDTO.m; sourceTree = "<group>"; };
-		91A5FA192CC7DEF700BB29CE /* ApiServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApiServiceProtocol.h; path = ../../../../../Desktop/ApiServiceProtocol.h; sourceTree = "<group>"; };
 		91C012802CC90A6000B6C798 /* InterestRealmModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterestRealmModel.h; sourceTree = "<group>"; };
 		91C012812CC90A6000B6C798 /* InterestRealmModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterestRealmModel.m; sourceTree = "<group>"; };
 		91C012832CC90ABC00B6C798 /* SubjectRealmModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubjectRealmModel.h; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		91C012892CC9524800B6C798 /* SurveyResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultsViewController.swift; sourceTree = "<group>"; };
 		91C0128B2CC958B000B6C798 /* DataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
 		91C0128C2CC958B000B6C798 /* DataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
+		91C0128F2CC9712800B6C798 /* ApiServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiServiceProtocol.h; sourceTree = "<group>"; };
 		B767893587B70D01D34CC24D /* Pods-SurveyWithRK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyWithRK.release.xcconfig"; path = "Target Support Files/Pods-SurveyWithRK/Pods-SurveyWithRK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,7 +132,7 @@
 		91A5FA082CC7D07F00BB29CE /* API */ = {
 			isa = PBXGroup;
 			children = (
-				91A5FA192CC7DEF700BB29CE /* ApiServiceProtocol.h */,
+				91C0128F2CC9712800B6C798 /* ApiServiceProtocol.h */,
 				91A5FA0D2CC7D0C400BB29CE /* ApiServiceMock.h */,
 				91A5FA0E2CC7D0C400BB29CE /* ApiServiceMock.m */,
 			);

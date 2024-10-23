@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@import Mantle;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface InterestDTO : NSObject
+@interface InterestDTO : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *name;
 

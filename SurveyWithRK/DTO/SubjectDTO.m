@@ -23,4 +23,23 @@
     return self;
 }
 
+//// Overriding the description method to provide a custom string representation
+//- (NSString *)description {
+//    return [NSString stringWithFormat:@"SubjectDTO: { name: %@, age: %@ , email: %@, interests: [\n%@] }", 
+//            self.name,
+//            self.age,
+//            self.email,
+//            self.interests];
+//}
+
+/// json mapping dictionary
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+        @"name": @"name",
+        @"age": @"age",
+        @"email": @"email",
+        @"interests": @"interests"
+    };
+}
+
 @end

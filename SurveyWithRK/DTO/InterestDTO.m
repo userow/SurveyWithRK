@@ -17,4 +17,16 @@
     return self;
 }
 
+//// Overriding the description method to provide a custom string representation
+//- (NSString *)description {
+//    return [NSString stringWithFormat:@"Description: { name: %@ }", self.name];
+//}
+
+/// json mapping dictionary
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+        @"name": @"name"
+    };
+}
+
 @end

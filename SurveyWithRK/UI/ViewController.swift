@@ -91,6 +91,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
             print("subjectDTO: \(subjectDTO)")
 
             // TODO: Pass subjectDTO to DataService for storing
+            
         }
 
         taskViewController.dismiss(animated: true, completion: nil)

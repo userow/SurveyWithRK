@@ -7,10 +7,11 @@
 
 #import <Foundation/Foundation.h>
 #import "InterestDTO.h"
+@import Mantle;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SubjectDTO: NSObject
+@interface SubjectDTO: MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *age;

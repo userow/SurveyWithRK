@@ -49,7 +49,16 @@ class SurveyResultsViewController: UITableViewController {
 
         // Configure the cell with subject data
         let subject = subjects[indexPath.row]
-        cell.textLabel?.text = "\(subject.name), Age: \(subject.age), Email: \(subject.email)"
+
+        let interests = subject.interests.map { $0.name }.joined(separator: ", ")
+
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.text = """
+\(subject.name)
+Age: \(subject.age)
+Email: \(subject.email)
+Interests: \(interests)
+"""
 
         return cell
     }

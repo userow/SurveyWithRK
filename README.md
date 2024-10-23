@@ -42,20 +42,43 @@ and repeat step 5.
 - [Mantle](https://github.com/Mantle/Mantle)
 - [Realm](https://github.com/realm/realm-swift)
 
-### Assumptions made. A brief explanation of your architectural choices.
-Strict Time management terms dictated need to cut down the architecture to MVC fast in development.
+### Assumptions Made and Architectural Choices
 
-Project Structure:
+Due to strict time management constraints, the architecture was simplified to follow the **MVC** pattern to speed up development.
+
+#### Project Structure:
 
 ![Project Logo](DOCS/Project-structure.png)
 
-Several Services were created for code cleanliness and responsibility separation.
+Several services were created to ensure code cleanliness and separation of responsibilities.
 
-`UI` directory contains UI related classes - ViewControllers - `HomeViewController` and `SurveyResultsViewController`. `SurveyBuilder.swift` class returns prebuilt ResearchKit `ORKTaskViewController`
-`DTO` directory contains DataTransferObjects - `InterestsDTO` and `SubjectDTO` - `MTLModel` subclasses - Mantle objects.
-`DATA` directory contains Realm data classes and `DataService` class for retrieving and deserealising from JSON string saved Surveys.
-`API` directory contains protocol and mock API implementation - `ApiServiceMock`. It saves Survey results from DTO to Realm.
-`ApiServiceMock` is initialized in `SceneDelegate` and passed to `HomeViewController` via it's initializer.
+- The `UI` directory contains UI-related classes, such as:
+  - `HomeViewController`
+  - `SurveyResultsViewController`
+  - The `SurveyBuilder.swift` class, which returns a pre-built ResearchKit `ORKTaskViewController`.
+
+- The `DTO` directory contains **Data Transfer Objects (DTOs)**:
+  - `InterestsDTO`
+  - `SubjectDTO`
+  - Both are subclasses of `MTLModel`, using Mantle for JSON serialization.
+
+- The `DATA` directory contains:
+  - **Realm** data classes.
+  - The `DataService` class, responsible for retrieving and deserializing saved surveys from JSON strings.
+
+- The `API` directory contains:
+  - The API protocol.
+  - A mock API implementation (`ApiServiceMock`), which saves survey results from DTOs to Realm.
+
+`ApiServiceMock` is initialized in the `SceneDelegate` and passed to `HomeViewController` via its initializer.
+
+### Potential improvements NOT made:
+- Coordinator for navigation and assembling ViewControllers and passing dependencies through it's initilizer
+- Strict and testable architecture (MVVM, MVP)
+- Intense use of ResearchKit - `SurveyBuilder` were using only basic features.
+- Better error handling and user feedback. - In some cases (not involving ResearchKit part - the errors and validations there were made quite well) error handling were represented as it's logging by print(err) / NSLog(err)
+- `SurveyResultsViewController` screen state for case of zero saved Surveys.
+
 
 ## Usage
 On the home screen, you will find two options:

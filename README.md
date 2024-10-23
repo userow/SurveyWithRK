@@ -42,6 +42,10 @@ and repeat step 5.
 - [Mantle](https://github.com/Mantle/Mantle)
 - [Realm](https://github.com/realm/realm-swift)
 
+#### ResearchKit Version
+
+- **ResearchKit version 1.5.2** was used. It is the pre-last stable version prior to the major 2.0.0 release. The most recent version, **2.2.16**, caused crash after pressing **NEXT** during the age entry step in the survey, so version 1.5.2 was chosen to ensure stability.
+
 ### Assumptions Made and Architectural Choices
 
 Due to strict time management constraints, the architecture was simplified to follow the **MVC** pattern to speed up development.

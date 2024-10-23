@@ -5,12 +5,12 @@ PODS:
   - Realm (10.54.1):
     - Realm/Headers (= 10.54.1)
   - Realm/Headers (10.54.1)
-  - ResearchKit (2.2.16)
+  - ResearchKit (1.5.2)
 
 DEPENDENCIES:
   - Mantle
   - Realm (~> 10.54.0)
-  - ResearchKit (~> 2.2.16)
+  - ResearchKit (~> 1.5.2)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -22,8 +22,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Mantle: c5aa8794a29a022dfbbfc9799af95f477a69b62d
   Realm: 7c70fc7ae6ebfb635b29bc05ac1a6c5eeeb3c572
-  ResearchKit: 4ce3751136fc82a02ac83f873b09b01b6974a761
+  ResearchKit: a5770681dd61afddd3d1f24d232b9abf00cba454
 
-PODFILE CHECKSUM: 6bb275a73793739aa315a43c6dc7b3df8d560cba
+PODFILE CHECKSUM: d588147b93a16688c919acd1fa7e37172f9c450f
 
 COCOAPODS: 1.15.2

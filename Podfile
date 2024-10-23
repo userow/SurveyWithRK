@@ -8,7 +8,7 @@ target 'SurveyWithRK' do
   use_frameworks!
 
   # Pods for SurveyWithRK
-  pod 'ResearchKit', '~>2.2.16' #  :git =>'https://github.com/ResearchKit/ResearchKit.git'
+  pod 'ResearchKit', '~>1.5.2' #  :git =>'https://github.com/ResearchKit/ResearchKit.git'
   pod 'Mantle'
   pod 'Realm', '~>10.54.0' #  :git =>'https://github.com/realm/realm-swift.git'
 end

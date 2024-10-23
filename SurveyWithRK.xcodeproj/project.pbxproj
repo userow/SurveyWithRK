@@ -19,6 +19,7 @@
 		91A5FA162CC7D39500BB29CE /* SubjectDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA132CC7D39500BB29CE /* SubjectDTO.m */; };
 		91C012822CC90A6000B6C798 /* InterestRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C012812CC90A6000B6C798 /* InterestRealmModel.m */; };
 		91C012852CC90ABC00B6C798 /* SubjectRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C012842CC90ABC00B6C798 /* SubjectRealmModel.m */; };
+		91C012882CC9460200B6C798 /* SubjectJsonRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C012872CC9460200B6C798 /* SubjectJsonRealmModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		91C012812CC90A6000B6C798 /* InterestRealmModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterestRealmModel.m; sourceTree = "<group>"; };
 		91C012832CC90ABC00B6C798 /* SubjectRealmModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubjectRealmModel.h; sourceTree = "<group>"; };
 		91C012842CC90ABC00B6C798 /* SubjectRealmModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubjectRealmModel.m; sourceTree = "<group>"; };
+		91C012862CC9460200B6C798 /* SubjectJsonRealmModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubjectJsonRealmModel.h; sourceTree = "<group>"; };
+		91C012872CC9460200B6C798 /* SubjectJsonRealmModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubjectJsonRealmModel.m; sourceTree = "<group>"; };
 		B767893587B70D01D34CC24D /* Pods-SurveyWithRK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyWithRK.release.xcconfig"; path = "Target Support Files/Pods-SurveyWithRK/Pods-SurveyWithRK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +151,8 @@
 				91C012812CC90A6000B6C798 /* InterestRealmModel.m */,
 				91C012832CC90ABC00B6C798 /* SubjectRealmModel.h */,
 				91C012842CC90ABC00B6C798 /* SubjectRealmModel.m */,
+				91C012862CC9460200B6C798 /* SubjectJsonRealmModel.h */,
+				91C012872CC9460200B6C798 /* SubjectJsonRealmModel.m */,
 			);
 			path = DATA;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				91A5F9EC2CC6A82800BB29CE /* SceneDelegate.swift in Sources */,
 				91A5FA002CC6B83B00BB29CE /* SurveyBuilder.swift in Sources */,
 				91C012852CC90ABC00B6C798 /* SubjectRealmModel.m in Sources */,
+				91C012882CC9460200B6C798 /* SubjectJsonRealmModel.m in Sources */,
 				91C012822CC90A6000B6C798 /* InterestRealmModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

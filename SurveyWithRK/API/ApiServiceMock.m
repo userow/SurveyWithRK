@@ -8,6 +8,7 @@
 #import "ApiServiceMock.h"
 @import Mantle;
 #import "SubjectRealmModel.h"
+#import "SubjectJsonRealmModel.h"
 
 @implementation ApiServiceMock
 
@@ -41,7 +42,14 @@
         NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
         NSLog(@"JSON: %@", jsonString);
 
-        //TODO: Save JSON to Realm
+        //Saving JSON to Realm
+        SubjectJsonRealmModel *subjJsonModel = [SubjectJsonRealmModel new];
+        subjJsonModel.date = NSDate.date;
+        subjJsonModel.json = jsonString;
+
+        [realm transactionWithBlock:^{
+            [realm addObject:subjJsonModel];
+        }];
     }
 }
 

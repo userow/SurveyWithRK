@@ -7,11 +7,42 @@
 
 #import "ApiServiceMock.h"
 @import Mantle;
+#import "SubjectRealmModel.h"
 
 @implementation ApiServiceMock
 
+/// store to Realm; serialize; store JSON to Realm
 - (void)sendEventWithSubject:(SubjectDTO *)subject {
-    // TODO: store to Realm; serialize; store JSON to Realm
+
+    // Create an instance of SubjectRealmModel
+    SubjectRealmModel *realmSubject = [[SubjectRealmModel alloc] initWithDTO:subject];
+
+    // Store to Realm
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm transactionWithBlock:^{
+        [realm addObject:realmSubject];
+    }];
+
+    NSError *error;
+
+    NSDictionary *dictionary = [MTLJSONAdapter JSONDictionaryFromModel:subject error:&error];
+
+    if (error) {
+        NSLog(@"Error serializing to JSON: %@", error.localizedDescription);
+    }
+
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionary
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&error];
+
+    if (!jsonData) {
+        NSLog(@"Error serializing to JSON: %@", error.localizedDescription);
+    } else {
+        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"JSON: %@", jsonString);
+
+        //TODO: Save JSON to Realm
+    }
 }
 
 @end

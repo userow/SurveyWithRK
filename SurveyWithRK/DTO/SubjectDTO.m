@@ -10,7 +10,7 @@
 @implementation SubjectDTO
 
 - (instancetype)initWithName:(NSString *)name
-                         age:(NSNumber *)age
+                         age:(NSInteger)age
                        email:(NSString *)email
                    interests:(NSArray<InterestDTO *> *)interests {
     self = [super init];
@@ -23,15 +23,6 @@
     return self;
 }
 
-//// Overriding the description method to provide a custom string representation
-//- (NSString *)description {
-//    return [NSString stringWithFormat:@"SubjectDTO: { name: %@, age: %@ , email: %@, interests: [\n%@] }", 
-//            self.name,
-//            self.age,
-//            self.email,
-//            self.interests];
-//}
-
 /// json mapping dictionary
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
@@ -40,6 +31,10 @@
         @"email": @"email",
         @"interests": @"interests"
     };
+}
+
++ (NSValueTransformer *)interestsJSONTransformer {
+    return [MTLJSONAdapter arrayTransformerWithModelClass:InterestDTO.class];
 }
 
 @end

@@ -17,6 +17,8 @@
 		91A5FA0F2CC7D0C400BB29CE /* ApiServiceMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA0E2CC7D0C400BB29CE /* ApiServiceMock.m */; };
 		91A5FA152CC7D39500BB29CE /* InterestDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA112CC7D39500BB29CE /* InterestDTO.m */; };
 		91A5FA162CC7D39500BB29CE /* SubjectDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5FA132CC7D39500BB29CE /* SubjectDTO.m */; };
+		91C012822CC90A6000B6C798 /* InterestRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C012812CC90A6000B6C798 /* InterestRealmModel.m */; };
+		91C012852CC90ABC00B6C798 /* SubjectRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C012842CC90ABC00B6C798 /* SubjectRealmModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		91A5FA122CC7D39500BB29CE /* SubjectDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectDTO.h; sourceTree = "<group>"; };
 		91A5FA132CC7D39500BB29CE /* SubjectDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectDTO.m; sourceTree = "<group>"; };
 		91A5FA192CC7DEF700BB29CE /* ApiServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ApiServiceProtocol.h; path = ../../../../../Desktop/ApiServiceProtocol.h; sourceTree = "<group>"; };
+		91C012802CC90A6000B6C798 /* InterestRealmModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterestRealmModel.h; sourceTree = "<group>"; };
+		91C012812CC90A6000B6C798 /* InterestRealmModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterestRealmModel.m; sourceTree = "<group>"; };
+		91C012832CC90ABC00B6C798 /* SubjectRealmModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubjectRealmModel.h; sourceTree = "<group>"; };
+		91C012842CC90ABC00B6C798 /* SubjectRealmModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubjectRealmModel.m; sourceTree = "<group>"; };
 		B767893587B70D01D34CC24D /* Pods-SurveyWithRK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyWithRK.release.xcconfig"; path = "Target Support Files/Pods-SurveyWithRK/Pods-SurveyWithRK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,10 @@
 		91A5FA1A2CC7E06000BB29CE /* DATA */ = {
 			isa = PBXGroup;
 			children = (
+				91C012802CC90A6000B6C798 /* InterestRealmModel.h */,
+				91C012812CC90A6000B6C798 /* InterestRealmModel.m */,
+				91C012832CC90ABC00B6C798 /* SubjectRealmModel.h */,
+				91C012842CC90ABC00B6C798 /* SubjectRealmModel.m */,
 			);
 			path = DATA;
 			sourceTree = "<group>";
@@ -264,6 +274,8 @@
 				91A5F9EA2CC6A82800BB29CE /* AppDelegate.swift in Sources */,
 				91A5F9EC2CC6A82800BB29CE /* SceneDelegate.swift in Sources */,
 				91A5FA002CC6B83B00BB29CE /* SurveyBuilder.swift in Sources */,
+				91C012852CC90ABC00B6C798 /* SubjectRealmModel.m in Sources */,
+				91C012822CC90A6000B6C798 /* InterestRealmModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +429,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,6 +462,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

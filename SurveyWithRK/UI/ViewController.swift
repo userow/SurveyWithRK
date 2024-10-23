@@ -53,6 +53,9 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
 
     @objc private func startTask() {
         guard let survey = SurveyBuilder.buildInterestsSurvey(delegate: self) else { return }
+
+        // To prevent dismissal of the survey by swipe down
+        survey.isModalInPresentation = true
         present(survey, animated: true, completion: nil)
     }
 
@@ -68,7 +71,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
 
             // Receiving age
             let ageResult = taskResult.stepResult(forStepIdentifier: "ageStep")?.firstResult as? ORKNumericQuestionResult
-            guard let age = ageResult?.numericAnswer else { return }
+            guard let age = ageResult?.numericAnswer?.intValue else { return }
 
             // Receiving email
             let emailResult = taskResult.stepResult(forStepIdentifier: "emailStep")?.firstResult as? ORKTextQuestionResult
@@ -90,8 +93,8 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
             // usingUserDTO for further processing
             print("subjectDTO: \(subjectDTO)")
 
-            // TODO: Pass subjectDTO to DataService for storing
-            
+            // Passing SubjectDTO to ApiService for processing
+            self.apiService.sendEvent(withSubject: subjectDTO)
         }
 
         taskViewController.dismiss(animated: true, completion: nil)

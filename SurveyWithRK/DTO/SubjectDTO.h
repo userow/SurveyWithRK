@@ -14,12 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SubjectDTO: MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSNumber *age;
+@property (nonatomic, assign) NSInteger age;
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSArray<InterestDTO *> *interests;
 
 - (instancetype)initWithName:(NSString *)name
-                         age:(NSNumber *)age
+                         age:(NSInteger)age
                        email:(NSString *)email
                    interests:(NSArray<InterestDTO *> *)interests;
 

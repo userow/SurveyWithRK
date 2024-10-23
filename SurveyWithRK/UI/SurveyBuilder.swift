@@ -13,8 +13,12 @@ class SurveyBuilder {
     static func buildInterestsSurvey(delegate: ORKTaskViewControllerDelegate) -> ORKTaskViewController? {
         guard let task = SurveyBuilder.createSurveyTask() else { return nil }
 
+        
         let taskViewController = ORKTaskViewController(task: task, taskRun: nil)
         taskViewController.delegate = delegate
+
+        // Fix for transparent navigation bar
+        taskViewController.navigationBar.backgroundColor = .white
 
         return taskViewController
     }

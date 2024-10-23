@@ -2,28 +2,28 @@ PODS:
   - Mantle (2.2.0):
     - Mantle/extobjc (= 2.2.0)
   - Mantle/extobjc (2.2.0)
-  - Realm (10.39.1):
-    - Realm/Headers (= 10.39.1)
-  - Realm/Headers (10.39.1)
+  - Realm (10.54.1):
+    - Realm/Headers (= 10.54.1)
+  - Realm/Headers (10.54.1)
   - ResearchKit (2.2.16)
 
 DEPENDENCIES:
   - Mantle
-  - Realm
+  - Realm (~> 10.54.0)
   - ResearchKit (~> 2.2.16)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Realm
     - ResearchKit
   trunk:
     - Mantle
-    - Realm
 
 SPEC CHECKSUMS:
   Mantle: c5aa8794a29a022dfbbfc9799af95f477a69b62d
-  Realm: 1f3157edf145f4d9036765ab550c8cb18f62b700
+  Realm: 7c70fc7ae6ebfb635b29bc05ac1a6c5eeeb3c572
   ResearchKit: 4ce3751136fc82a02ac83f873b09b01b6974a761
 
-PODFILE CHECKSUM: e2da0f52c07f9b09cccdc6bdbba797bbbac1e558
+PODFILE CHECKSUM: 6bb275a73793739aa315a43c6dc7b3df8d560cba
 
 COCOAPODS: 1.15.2

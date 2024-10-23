@@ -23,5 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithDTO:(SubjectDTO *)interestDTO;
 
 @end
-RLM_ARRAY_TYPE(SubjectRealmModel)
+RLM_COLLECTION_TYPE(SubjectRealmModel)
+
 NS_ASSUME_NONNULL_END

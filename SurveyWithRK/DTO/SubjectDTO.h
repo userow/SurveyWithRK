@@ -5,9 +5,10 @@
 //  Created by Pavlo Vasylenko on 21.10.2024.
 //
 
-#import <Foundation/Foundation.h>
-#import "InterestDTO.h"
+@import Foundation;
 @import Mantle;
+#import "InterestDTO.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 

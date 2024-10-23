@@ -16,5 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *json;
 
 @end
+RLM_COLLECTION_TYPE(SubjectJsonRealmModel)
 
 NS_ASSUME_NONNULL_END

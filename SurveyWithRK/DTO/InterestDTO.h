@@ -5,7 +5,7 @@
 //  Created by Pavlo Vasylenko on 21.10.2024.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 @import Mantle;
 
 NS_ASSUME_NONNULL_BEGIN

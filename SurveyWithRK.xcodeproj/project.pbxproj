@@ -10,7 +10,7 @@
 		69889BD15E5C1B179D18BF0E /* Pods_SurveyWithRK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB3279A91CB32D1A2577F1C /* Pods_SurveyWithRK.framework */; };
 		91A5F9EA2CC6A82800BB29CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F9E92CC6A82800BB29CE /* AppDelegate.swift */; };
 		91A5F9EC2CC6A82800BB29CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F9EB2CC6A82800BB29CE /* SceneDelegate.swift */; };
-		91A5F9EE2CC6A82800BB29CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F9ED2CC6A82800BB29CE /* ViewController.swift */; };
+		91A5F9EE2CC6A82800BB29CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F9ED2CC6A82800BB29CE /* HomeViewController.swift */; };
 		91A5F9F32CC6A82A00BB29CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A5F9F22CC6A82A00BB29CE /* Assets.xcassets */; };
 		91A5F9F62CC6A82A00BB29CE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 91A5F9F52CC6A82A00BB29CE /* Base */; };
 		91A5FA002CC6B83B00BB29CE /* SurveyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A5F9FF2CC6B83B00BB29CE /* SurveyBuilder.swift */; };
@@ -20,6 +20,8 @@
 		91C012822CC90A6000B6C798 /* InterestRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C012812CC90A6000B6C798 /* InterestRealmModel.m */; };
 		91C012852CC90ABC00B6C798 /* SubjectRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C012842CC90ABC00B6C798 /* SubjectRealmModel.m */; };
 		91C012882CC9460200B6C798 /* SubjectJsonRealmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C012872CC9460200B6C798 /* SubjectJsonRealmModel.m */; };
+		91C0128D2CC958B000B6C798 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C0128C2CC958B000B6C798 /* DataService.m */; };
+		91C0128E2CC961C300B6C798 /* SurveyResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C012892CC9524800B6C798 /* SurveyResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +30,7 @@
 		91A5F9E62CC6A82800BB29CE /* SurveyWithRK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyWithRK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A5F9E92CC6A82800BB29CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91A5F9EB2CC6A82800BB29CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91A5F9ED2CC6A82800BB29CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91A5F9ED2CC6A82800BB29CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		91A5F9F22CC6A82A00BB29CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91A5F9F52CC6A82A00BB29CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91A5F9F72CC6A82A00BB29CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +49,9 @@
 		91C012842CC90ABC00B6C798 /* SubjectRealmModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubjectRealmModel.m; sourceTree = "<group>"; };
 		91C012862CC9460200B6C798 /* SubjectJsonRealmModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubjectJsonRealmModel.h; sourceTree = "<group>"; };
 		91C012872CC9460200B6C798 /* SubjectJsonRealmModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubjectJsonRealmModel.m; sourceTree = "<group>"; };
+		91C012892CC9524800B6C798 /* SurveyResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultsViewController.swift; sourceTree = "<group>"; };
+		91C0128B2CC958B000B6C798 /* DataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
+		91C0128C2CC958B000B6C798 /* DataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
 		B767893587B70D01D34CC24D /* Pods-SurveyWithRK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyWithRK.release.xcconfig"; path = "Target Support Files/Pods-SurveyWithRK/Pods-SurveyWithRK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,8 +122,9 @@
 		91A5F9FD2CC6B0E900BB29CE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				91A5F9ED2CC6A82800BB29CE /* ViewController.swift */,
+				91A5F9ED2CC6A82800BB29CE /* HomeViewController.swift */,
 				91A5F9FF2CC6B83B00BB29CE /* SurveyBuilder.swift */,
+				91C012892CC9524800B6C798 /* SurveyResultsViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -153,6 +159,8 @@
 				91C012842CC90ABC00B6C798 /* SubjectRealmModel.m */,
 				91C012862CC9460200B6C798 /* SubjectJsonRealmModel.h */,
 				91C012872CC9460200B6C798 /* SubjectJsonRealmModel.m */,
+				91C0128B2CC958B000B6C798 /* DataService.h */,
+				91C0128C2CC958B000B6C798 /* DataService.m */,
 			);
 			path = DATA;
 			sourceTree = "<group>";
@@ -272,9 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91A5F9EE2CC6A82800BB29CE /* ViewController.swift in Sources */,
+				91A5F9EE2CC6A82800BB29CE /* HomeViewController.swift in Sources */,
+				91C0128E2CC961C300B6C798 /* SurveyResultsViewController.swift in Sources */,
 				91A5FA162CC7D39500BB29CE /* SubjectDTO.m in Sources */,
 				91A5FA152CC7D39500BB29CE /* InterestDTO.m in Sources */,
+				91C0128D2CC958B000B6C798 /* DataService.m in Sources */,
 				91A5FA0F2CC7D0C400BB29CE /* ApiServiceMock.m in Sources */,
 				91A5F9EA2CC6A82800BB29CE /* AppDelegate.swift in Sources */,
 				91A5F9EC2CC6A82800BB29CE /* SceneDelegate.swift in Sources */,

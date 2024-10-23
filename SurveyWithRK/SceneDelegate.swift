@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let apiService = ApiServiceMock()
 
         // Created VC
-        let viewController = ViewController(apiService: apiService)
+        let viewController = HomeViewController(apiService: apiService)
 
         // Create Navigation VC with VC in it
         let navViewController = UINavigationController(rootViewController: viewController)

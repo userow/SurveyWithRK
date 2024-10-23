@@ -8,7 +8,7 @@
 import UIKit
 import ResearchKit
 
-class ViewController: UIViewController, ORKTaskViewControllerDelegate {
+class HomeViewController: UIViewController {
 
     // MARK: - Properties
 
@@ -37,7 +37,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
         title = "ResearchKit Example"
 
         let startButton = UIButton(type: .system)
-        startButton.setTitle("Start ResearchKit Task", for: .normal)
+        startButton.setTitle("Start ResearchKit Survey", for: .normal)
         startButton.addTarget(self, action: #selector(startTask), for: .touchUpInside)
 
         startButton.translatesAutoresizingMaskIntoConstraints = false
@@ -47,6 +47,19 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
             startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+        
+        let surveyResultsButton = UIButton(type: .system)
+        surveyResultsButton.setTitle("View Saved Survey Results", for: .normal)
+        surveyResultsButton.addTarget(self, action: #selector(showSurveyResults), for: .touchUpInside)
+
+        surveyResultsButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(surveyResultsButton)
+
+        NSLayoutConstraint.activate([
+            surveyResultsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            surveyResultsButton.topAnchor.constraint(equalTo: startButton.bottomAnchor, constant: 40)
+        ])
+
     }
 
     // MARK: - Actions
@@ -58,6 +71,14 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
         survey.isModalInPresentation = true
         present(survey, animated: true, completion: nil)
     }
+
+    @objc private func showSurveyResults() {
+        let surveyResultsVC = SurveyResultsViewController()
+        navigationController?.pushViewController(surveyResultsVC, animated: true)
+    }
+}
+
+extension HomeViewController: ORKTaskViewControllerDelegate {
 
     // MARK: - ORKTaskViewControllerDelegate
 
@@ -90,7 +111,7 @@ class ViewController: UIViewController, ORKTaskViewControllerDelegate {
             // Making SubjectDTO object
             let subjectDTO = SubjectDTO(name: name, age: age, email: email, interests: interestsDTO)
 
-            // usingUserDTO for further processing
+            // printing UserDTO for assurance
             print("subjectDTO: \(subjectDTO)")
 
             // Passing SubjectDTO to ApiService for processing
